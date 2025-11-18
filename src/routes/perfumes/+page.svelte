@@ -1,6 +1,6 @@
 <script>
     import { supabase } from '$lib/supabase_client.js';
-    import perfumeCard from '$lib/components/perfumeCard.svelte';
+    import PerfumeCard from '$lib/components/PerfumeCard.svelte';
 
     console.log('Supabase client initialized:', !!supabase);
 
