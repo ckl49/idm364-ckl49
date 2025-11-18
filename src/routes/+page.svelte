@@ -1,7 +1,7 @@
 <script>
 	import { fade, fly, slide } from 'svelte/transition';
 
-    import PerfumeCard from '$lib/components/PerfumeCard.svelte';
+	import perfumeCard from '$lib/components/perfumeCard.svelte';
     import Carousel from '$lib/components/carousel.svelte'
     
     export let data;
