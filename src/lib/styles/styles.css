@@ -1,0 +1,232 @@
+@font-face {
+    font-family: "Literata";
+    src: url("/fonts/Literata-VariableFont_opsz,wght.ttf") format("truetype");
+    font-weight: 200 900; 
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "LiterataItalic";
+    src: url("/fonts/Literata-Italic-VariableFont_opsz,wght.ttf") format("truetype");
+    font-weight: 200 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-VariableFont_wdth,wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "RobotoItalic";
+    src: url("/fonts/Roboto-Italic-VariableFont_wdth,wght.ttf") format("truetype");
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+    /* primitives */
+    --purple-gray-100: rgba(238,238,239, 1);
+    --purple-gray-200: rgba(200, 200, 205, 1);
+    --purple-gray-300: rgba(167, 167, 175, 1);
+    --purple-gray-400: rgba(137, 137, 148, 1);
+    --purple-gray-500: rgba(107, 107, 121, 1);
+    --purple-gray-600: rgba(56, 56, 75, 1);
+    --purple-gray-700: rgba(34, 34, 55, 1);
+
+    --heading-font: "Literata", Georgia, serif;
+    --heading-font-italic: "LiterataItalic", Georgia, serif;
+    --body-font: "Roboto", sans-serif;
+    --body-font-italic: "RobotoItalic", sans-serif;
+
+    --padding-large: 30px;
+    --padding-med: 24px;
+    --padding-small: 12px;
+    --padding-xl: 120px;
+    --gap-small: 16px;
+    --gap-med: 30px;
+    --gap-large: 60px;
+    --gap-xl: 90px;
+}
+
+h1 {
+    font-size: 72px;
+    font-family: var(--heading-font);
+    font-weight: 500;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: -3.6px;
+    margin: 0;
+}
+
+h2 {
+    font-family: var(--heading-font);
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.44px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-family: var(--body-font);
+    margin: 0;
+    padding: 0;
+    letter-spacing: -0.36px;
+}
+
+button {
+    font-size: 18px;
+    font-family: var(--body-font);
+    border: none;
+    letter-spacing: -0.36px;
+}
+
+a {
+    font-family: var(--body-font);
+    text-transform: uppercase;
+    color: var(--purple-gray-700);
+    text-decoration: none;
+    
+    letter-spacing: -0.54px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus {
+    color: var(--purple-gray-500);
+}
+
+a:active {
+    color: var(--purple-gray-400)
+}
+
+.carousel-div .perfume-card {
+    flex: 0 0 400px; /* each card is 300px wide */
+}
+
+.subheading {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.72px;
+    font-family: var(--body-font);
+}
+
+.primary-button {
+    display: flex;
+    padding: var(--padding-s, 12px) var(--padding-l, 30px);
+    justify-content: center;
+    align-items: center;
+    background: var(--purple-gray-700);
+    color: white;
+}
+
+.primary-button:hover {
+    background: var(--purple-gray-500);
+    color: white;
+    transition: ease-out 200ms;
+}
+
+.primary-button:focus {
+    background: var(--purple-gray-400);
+    color: white;
+    text-decoration: underline;
+    transition: ease-out 200ms;
+}
+
+.primary-button:active {
+    background: var(--purple-gray-300);
+    color: white;
+    text-decoration: underline;
+    transition: ease-out 200ms;
+}
+
+
+.secondary-button {
+    display: flex;
+    padding: var(--padding-s, 12px) var(--padding-l, 30px);
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--purple-gray-600);
+}
+
+.secondary-button:hover {
+    background: var(--purple-gray-300);
+    color: black;
+    transition: ease-out 200ms;
+    border: 1px solid var(--purple-gray-700);
+}
+
+.secondary-button:focus {
+    background: var(--purple-gray-500);
+    color: white;
+    text-decoration: underline;
+    border: 1px solid var(--purple-gray-700);
+
+    transition: ease-out 200ms;
+}
+
+.secondary-button:focus {
+    background: var(--purple-gray-700);
+    color: white;
+    text-decoration: underline;
+    border: 1px solid var(--purple-gray-700);
+
+    transition: ease-out 200ms;
+}
+
+
+
+
+/* TABLET */
+
+@media screen and (max-width= 769px) {
+    
+h1 {
+    font-size: 72px;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.subheading {
+    font-size: 24px;
+    line-height: 1.25rem;
+}
+
+}
