@@ -1,5 +1,5 @@
 <script>
-	import PerfumeCard from '$lib/components/PerfumeCard.svelte';
+	import PerfumeCard from '$lib/components/perfumeCard.svelte';
 	// import aurnerImg from '$lib/assets/images/aesop_aurner/aurner_1.webp';
 
     let {perfumes} = $props()
