@@ -1,12 +1,7 @@
-import { supabase } from '$lib/supabase_client';
+import { supabase } from '$lib/supabase_client.js';
 
 export async function load() {
-    const { data, error } = await supabase
-        .from('perfumes')
+  const { data: products, error } = await supabase.from('products').select('*');
 
-    if (error) throw error;
-
-    return {
-        featuredPerfumes: data
-    };
+  return { products };
 }

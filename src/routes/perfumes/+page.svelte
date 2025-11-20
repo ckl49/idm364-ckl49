@@ -25,15 +25,27 @@
 </main>
 
 <style>
-  section {
-    width: 90vw;
+  main {
     display: flex;
     flex-direction: column;
-    justify-self: center;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+  }
+
+  section {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .header {
     padding-bottom: 30px;
+    width: 100%;
+    align-items: start;
   }
 
   /* .perfumes {

@@ -25,7 +25,7 @@
                 </svg>
             <p class="subheading" style="color: #6B6B79">handpicked fragrances that tell stories. explore your new scent.</p>
         </div>
-        <div style="display: flex; flex-direction: row; gap: 16px;">
+        <div class="buttons">
             <a class="primary-button" href="/perfumes">explore</a>
             <a class="secondary-button" href="/shoppingCart">check my shopping cart</a>
         </div>
@@ -61,6 +61,66 @@
 
     .title {
         gap: 16px;
+    }
+
+    .buttons {
+        display: flex; 
+        flex-direction: row; 
+        gap: 16px;
+    }
+
+    @media (max-width: 700px) {
+        .hero-section {
+            display: flex;
+            height: 30vh;
+            margin-block-start: 30px;
+            justify-content: center;
+            align-items: center;
+            gap: var(--gap-l, 60px);
+            align-self: center;
+            width: 100%;
+            justify-items: center;
+        }
+
+        .hero-div {
+            width: 90%;
+        }
+
+        .buttons {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .buttons > a {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 593px) {
+        .hero-section {
+            gap: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        .hero-div {
+            padding: 0 24px;
+        }
+
+        .buttons {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .buttons > a {
+            width: 100%;
+        }
+
+        .hero-logo {
+            width: 100%;
+            height: auto;
+        }
+
     }
 
     

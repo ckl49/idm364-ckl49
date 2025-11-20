@@ -7,15 +7,17 @@
 </script> -->
 
 <script>
-	let {perfume} = $props()
-
+    let { perfume } = $props();
+  
+    import { addToCart } from '$lib/stores.js';
+  
     const imageArray = perfume.images.split("*");
     const firstImage = imageArray[0];
-    
+  
     const slug = perfume.perfume_name
-        .toLowerCase()
-        .replaceAll(" ", "-")
-        .replace(/[^a-z0-9-]/g, ""); // removes special chars
+      .toLowerCase()
+      .replaceAll(" ", "-")
+      .replace(/[^a-z0-9-]/g, ""); //removes special characters
 </script>
 
 <div class="perfume-card">
@@ -29,11 +31,20 @@
             <p class="price">{perfume.price}</p>
         </div>
 
-        <p class="brand">{perfume.brand}</p>
+        <div class="card-title">
+            <p class="brand">{perfume.brand}</p>
+            <p class="brand">{perfume.size}</p>
+        </div>
     </div>
 
-    <button class="add-to-cart primary-button">add to cart</button>
-</div>
+    <!-- <PrimaryButton text="add to cart", onclick={() => addToCart(perfume)} /> -->
+
+    <button
+    class="add-to-cart primary-button"
+    onclick={() => addToCart(perfume)}
+  >
+    add to cart
+  </button></div>
 
 
 <style>
@@ -42,6 +53,7 @@
         flex-direction: column;
         gap: 12px;
         width: 100%; /* takes full grid column width */
+        min-width: 300px;
     }
 
     .perfume-card img {
@@ -53,6 +65,7 @@
 
     .brand {
         color: gray;
+        font-weight: 200;
     }
 
     .card-title {

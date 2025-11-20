@@ -43,5 +43,6 @@
       color: #444;
       line-height: 1.5;
       font-family: 'Roboto';
+      padding-left: 1rem;
     }
   </style>

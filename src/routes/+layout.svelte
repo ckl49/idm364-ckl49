@@ -6,6 +6,8 @@
 
 	import { supabase } from '$lib/supabase_client.js';
 
+	import { cart } from '$lib/stores.js';
+
 	let { children } = $props();
 </script>
 
@@ -32,7 +34,7 @@
 					</svg>
 			</a>
 		</li>
-		<li><a href="/shopping_cart">Shopping Cart (0)</a></li>
+		<li><a href="/shopping_cart">Cart ({$cart.length})</a></li>
 	</ul>
 </nav>
 
@@ -65,7 +67,7 @@
 	</div>
 	<div class="div3">
 		<a href="/perfumes">Perfumes</a>
-		<a href="/shopping_cart">Shopping Cart (0)</a>
+		<a href="/shopping_cart">Cart</a>
 	</div>
 
 </footer>
@@ -141,7 +143,6 @@
 	}
 	
 
-
 	footer > div > a {
 		font-family: var(--body-font);
 		text-transform: uppercase;
@@ -171,5 +172,34 @@
 
 	.logo {
 		width: fit-content;
+	}
+
+    @media (max-width: 700px) {
+		footer {
+			flex-direction: column;
+			gap: 24px;
+			width: 100%;
+			height: auto;
+		}
+
+		.div1{
+		    order: 2; 
+			display: flex;
+			flex-direction: column;
+			padding-top: 24px;
+			height: fit-content;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.div2 {
+			 order: 3;
+		}
+
+		.div3 { 
+			order: 1; 
+			gap: 24px;
+		}
+
 	}
 </style>
