@@ -13,6 +13,9 @@
   
     const imageArray = perfume.images.split("*");
     const firstImage = imageArray[0];
+
+    const smallImageArray = perfume.small_images.split("*");
+    const smallFirstImage = smallImageArray[0];
   
     const slug = perfume.perfume_name
       .toLowerCase()
@@ -21,7 +24,10 @@
 </script>
 
 <div class="perfume-card">
-	<img src={firstImage} alt={`${perfume.brand} ${perfume.perfume_name}`} />
+	<picture>
+        <source srcset = {smallFirstImage} media="(max-width: 600px)">
+        <img src={firstImage} alt={`${perfume.brand} ${perfume.perfume_name}`} />
+    </picture>
 
     <div class="card-text">
         <div class="card-title">
@@ -53,7 +59,7 @@
         flex-direction: column;
         gap: 12px;
         width: 100%; /* takes full grid column width */
-        min-width: 300px;
+        /* min-width: 300px; */
     }
 
     .perfume-card img {

@@ -60,6 +60,8 @@
     }
 
     .title {
+        display: flex;
+        flex-direction: column;
         gap: 16px;
     }
 
@@ -72,7 +74,7 @@
     @media (max-width: 700px) {
         .hero-section {
             display: flex;
-            height: 30vh;
+            height: 60vh;
             margin-block-start: 30px;
             justify-content: center;
             align-items: center;
@@ -91,7 +93,7 @@
             width: 100%;
         }
 
-        .buttons > a {
+        a .buttons {
             width: 100%;
         }
     }
@@ -101,6 +103,11 @@
             gap: 0;
             padding: 0;
             width: 100%;
+        }
+
+        .title {
+            display: flex;
+            gap: 16px;
         }
 
         .hero-div {

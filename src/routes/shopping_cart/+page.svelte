@@ -1,27 +1,14 @@
-<!-- <script>
-    
-    import { writable } from 'svelte/store';
-
-    export const cart = writable([]);
-</script>
-
-<h1>Shopping Cart</h1> -->
-
 <script>
     import ShoppingCartCard from "$lib/components/shoppingCartCard.svelte"
     import { cart, addToCart, removeFromCart } from '$lib/stores.js';
-    export let data;
-
-    // let subtotal = "3000.00";
-    // let tax = "3.00"
-    // let total = "3003.00";
-
-    let subtotal = $cart.reduce((sum, item) => sum + item.price * item.amount, 0);
+    // export const data;
 
     const TAX_RATE = 0.06;
 
-    let tax = subtotal * TAX_RATE;
-    let total = subtotal + tax;
+    // automatically recalculated whenever $cart changes
+    $: subtotal = $cart.reduce((sum, item) => sum + item.price * item.amount, 0);
+    $: tax = subtotal * TAX_RATE;
+    $: total = subtotal + tax;
 </script>
     
   <main>
@@ -83,7 +70,7 @@
     }
 
     section {
-        width: 50%;
+        width: 70%;
         display: flex;
         flex-direction: column;
         gap: 24px;
@@ -108,5 +95,21 @@
 
     .black {
         font-size: 24px;
+    }
+
+    @media (max-width: 760px) {
+        
+        section {
+            width: 90%;
+        }
+
+        section > div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        
+        
     }
 </style>

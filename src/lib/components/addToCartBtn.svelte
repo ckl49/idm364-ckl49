@@ -1,5 +1,5 @@
 <script>
-  let { text = "Button", onClick = () => {} } = $props();
+  let { text = "add to cart", onClick = () => {} } = $props();
 </script>
 
 <button class="primary-button" onclick={onClick}>
