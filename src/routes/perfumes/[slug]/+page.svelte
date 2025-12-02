@@ -109,4 +109,34 @@
 
     .right-side-hero {
         flex: 1;
-        min-w
+        min-width: 260px;
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+    }
+
+    .details-div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        align-self: stretch;
+        width: 100%;
+    }
+
+    @media (max-width: 900px) {
+      .right-side-hero {
+        padding-bottom: 60px;
+        height: auto;
+      }
+
+      img {
+        max-width: none;
+    }
+
+
+    }
+  </style>
+  
+
+

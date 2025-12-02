@@ -73,4 +73,56 @@
     }
 
     .shoppingCartCard > img {
-        wi
+        width: 100px;
+        height: 100px;
+    }
+
+    .incrementer {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        justify-content: end;
+    }
+
+    .name {
+        font-size: 18px;
+    }
+
+    .price > p {
+        text-align: end;
+    }
+
+
+    @media (max-width: 488px) {
+
+        
+        .shoppingCartCard {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        }
+
+
+        .text-column {
+            grid-column: 1;
+            grid-row: 2;
+        }
+
+        .price {
+            grid-column: 2;
+            grid-row: 2;
+            text-align: end;
+            
+        }
+
+        .incrementer {
+            grid-column: 2;
+            grid-row: 1;
+            justify-content: end;        
+        }
+
+
+    }
+</style>
