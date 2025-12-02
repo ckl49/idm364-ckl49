@@ -5,7 +5,7 @@
     import Carousel from "$lib/components/carousel.svelte";
     import Accordion from "$lib/components/accordion.svelte";
     import AddToCartButton from "$lib/components/addToCartBtn.svelte";
-    import Slideshow from "$lib/components/Slideshow.svelte";
+    import Slideshow from "$lib/components/slideshow.svelte";
 
 
     import { addToCart } from "$lib/stores.js";
