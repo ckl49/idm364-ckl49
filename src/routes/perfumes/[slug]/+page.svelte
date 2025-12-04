@@ -137,9 +137,11 @@
         .right-side-hero {
         padding-bottom: 60px;
         height: auto;
-      }
+        }
 
-
+        .hero-section {
+            padding: 0px 30px;
+        }
 
     }
   </style>
