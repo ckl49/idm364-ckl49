@@ -1,4 +1,5 @@
 <script>
+    import { fade } from "svelte/transition"
     import { supabase } from '$lib/supabase_client.js';
     import PerfumeCard from '$lib/components/perfumeCard.svelte';
 
@@ -11,12 +12,12 @@
 </script>
 
 <main>
-  <section>
+  <section in:fade={{duration: 300}}>
     <div class="header">
       <h1>Perfumes</h1>
       <p class="subheading">Find your forever fragrance.</p>
     </div>
-    <div class="cards-grid">
+    <div class="cards-grid" in:fade={{ duration: 600 }}>
       {#each perfumes as perfume}
           <PerfumeCard class="perfume-card" perfume={perfume} />
       {/each}

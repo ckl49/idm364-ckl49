@@ -1,6 +1,7 @@
 <script>
     import ShoppingCartCard from "$lib/components/shoppingCartCard.svelte"
     import { cart, addToCart, removeFromCart } from '$lib/stores.js';
+	import { fade, slide } from "svelte/transition";
     // export const data;
 
     const TAX_RATE = 0.06;
@@ -11,11 +12,11 @@
     $: total = subtotal + tax;
 </script>
     
-  <main>
+  <main  in:fade={{ duration: 600 }}>
       <section>
         <h1>Your Cart</h1>
 
-        <div>
+        <div in:slide={{duration : 600 }}>
             {#if $cart.length === 0}
                 <p>No items yet.</p>
                 {:else}

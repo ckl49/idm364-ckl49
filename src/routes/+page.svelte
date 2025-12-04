@@ -27,7 +27,7 @@
         </div>
         <div class="buttons">
             <a class="primary-button" href="/perfumes">explore</a>
-            <a class="secondary-button" href="/shoppingCart">check my shopping cart</a>
+            <a class="secondary-button" href="/shopping_cart">check my shopping cart</a>
         </div>
     </div>
 </section>
@@ -93,7 +93,7 @@
             width: 100%;
         }
 
-        a .buttons {
+        .buttons > a {
             width: 100%;
         }
     }

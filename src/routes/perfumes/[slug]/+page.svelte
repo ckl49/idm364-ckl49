@@ -20,7 +20,7 @@
         <Slideshow {images}/>
         <!-- <img src={firstImage} alt={perfume.perfume_name} width="555" height="736"/> -->
         <div class="right-side-hero">
-            <a href="/perfumes">back to perfumes</a>
+            <a href="/perfumes" class="link">back to perfumes</a>
             <div class="perfume-info">
                 <div class="perfume-text">
                         <p class="subheading">{perfume.brand}</p>
@@ -50,6 +50,7 @@
   
   
   <style>
+    
     .hero-section {
         display: flex;
         gap: 40px;
@@ -62,17 +63,21 @@
 
     }
 
+    .link {
+        text-decoration: underline;
+    }
+
     h1 {
       line-height: 5rem;
     }
 
-    img {
+    /* img {
         width: 100%;
         max-width: 450px;
         border-radius: 8px;
         object-fit: contain;
         height: auto
-    }
+    } */
     
 
     .row {
@@ -125,14 +130,15 @@
     }
 
     @media (max-width: 900px) {
-      .right-side-hero {
+        h1 {
+            font-size: 4rem;
+        }
+      
+        .right-side-hero {
         padding-bottom: 60px;
         height: auto;
       }
 
-      img {
-        max-width: none;
-    }
 
 
     }

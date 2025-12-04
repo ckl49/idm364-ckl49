@@ -34,12 +34,12 @@
 
     </div>
     <div class="incrementer">
-        <button onclick={() => removeFromCart(perfume)}>
-            –
+        <button onclick={() => removeFromCart(perfume)} aria-label="subtract">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#000603" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14"/></svg>
           </button>   
           <p>{perfume.amount}</p>
-        <button onclick={() => addToCart(perfume)}>
-        +
+        <button onclick={() => addToCart(perfume)} aria-label="add">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="#000603" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 12h14m-7-7v14"/></svg>
         </button>
     </div>
     <div class="text-column price">
@@ -72,16 +72,33 @@
         font-weight: 200;
     }
 
-    .shoppingCartCard > img {
+    /* .shoppingCartCard > img {
         width: 100px;
         height: 100px;
-    }
+    } */
 
     .incrementer {
         display: flex;
         flex-direction: row;
         gap: 16px;
         justify-content: end;
+    }
+
+    .incrementer > button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px;
+    }
+
+    .incrementer > button:hover {
+        background-color: #DDDDDD;
+    }
+
+    .incrementer > p {
+        display: flex;
+        justify-self: center;
+        align-items: center;
     }
 
     .name {

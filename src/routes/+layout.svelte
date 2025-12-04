@@ -1,5 +1,5 @@
 <script>
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/logomark.svg'
 
 	import '$lib/styles/styles.css' 
 	// global styles
@@ -7,6 +7,8 @@
 	import { supabase } from '$lib/supabase_client.js';
 
 	import { cart } from '$lib/stores.js';
+
+	let menuOpen = false;
 
 	let { children } = $props();
 </script>
