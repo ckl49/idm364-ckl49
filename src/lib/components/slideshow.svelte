@@ -4,9 +4,14 @@
   let { images = [] } = $props();
   let index = $state(0);
 
-  // Reset index whenever the images array changes
+  let prevImages;
+
+  
   $effect(() => {
-    index = 0;
+    if (prevImages !== images) {
+      index = 0;
+      prevImages = images;
+    }
   });
 
   function next() {
@@ -28,8 +33,6 @@
   </div>
 
 <style>
-
-  
     .slideshow {
     position: relative;
     width: 50vw;

@@ -16,7 +16,7 @@
     $: images = perfume?.images?.split('*').map(i => i.trim());
 </script>
   
-    <section class="hero-section" in:slide>
+    <section class="hero-section" in:fade={{duration:300}}>
         <Slideshow {images}/>
         <!-- <img src={firstImage} alt={perfume.perfume_name} width="555" height="736"/> -->
         <div class="right-side-hero">
