@@ -35,6 +35,7 @@
       align-items: center;
       width: 100%;
       text-align: left;
+      color: #444;
       cursor: pointer;
     }
   

@@ -14,8 +14,8 @@
 <main>
   <section in:fade={{duration: 300}}>
     <div class="header">
-      <h1>Perfumes</h1>
-      <p class="subheading">Find your forever fragrance.</p>
+      <h1>perfumes</h1>
+      <p class="subheading">find your forever fragrance.</p>
     </div>
     <div class="cards-grid" in:fade={{ duration: 600 }}>
       {#each perfumes as perfume}
